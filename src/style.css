@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+
+/* -------------------- Overall Classes -------------------- */
+body {
+  @apply dark:bg-black dark:text-white;
+}
+.flex-cc {
+  @apply flex justify-center items-center;
+}
+.flex-bc {
+  @apply flex justify-between items-center;
+}
+.story-ring {
+  @apply bg-gradient-to-tr from-igo to-igp rounded-full p-[2px];
+}
+
+/* ------------------- {*}-element css -------------------- */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 20px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #f3f4f6;
+}
+
+/* -------------------- PostActions.vue -------------------- */
+.actions-links {
+  @apply w-full text-center py-[0.6rem] text-sm font-semibold transition-colors border-b dark:border-b-gray-500 text-gray-900 hover:text-gray-600 dark:text-white dark:hover:text-gray-400;
+}
+
+/* ------------------ edit-post/Form.vue ------------------- */
+.edit-post-btn {
+  @apply border-y text-gray-900 bg-white hover:bg-gray-100 dark:bg-gray-400 focus:outline-none px-2 py-2.5 hover:text-gray-800;
+}
+
+/* ---------------------- Sidebar.vue ---------------------- */
+#sidebar {
+  /* Navbar Links */
+  .nav-links {
+    @apply items-center font-semibold hover:bg-gray-100 dark:hover:bg-gray-900 p-3 rounded-md transition-colors;
+  }
+
+  /* Navbar Icons */
+  .nav-icons {
+    @apply w-7 mr-3 group-hover:scale-105 transition-all;
+  }
+
+  /* Active Links */
+  .router-link-exact-active {
+    @apply font-bold bg-gray-100 dark:bg-gray-900;
+
+    .nav-icons {
+      @apply scale-105;
+    }
+
+    /* Just for Profile-Link */
+    .profile {
+      @apply border-2 border-black;
+    }
+  }
+
+  /* Just for Message-Link */
+  .message-link {
+    @apply font-bold bg-gray-100 dark:bg-gray-900;
+  }
+  .message-icon {
+    @apply scale-105;
+  }
+}
+
+@tailwind utilities;
